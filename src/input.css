@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base{
+    body{
+        @apply overflow-x-hidden
+    }
+    p{
+        @apply text-gray
+    }
+}
+
+@layer components{
+    .reqs{
+        @apply bg-white md:bg-transparent text-left p-8 rounded-md min-h-[250px]
+    }
+    .items{
+        @apply hover:bg-white rounded-xl
+    }
+    .footer__grid ul li{
+        @apply hover:text-green mb-5
+    }
+    .agency__item img{
+        @apply w-[180px] h-[120px] object-contain
+    }
+}
+
+.header nav ul li a{
+    @apply hover:text-green hover:border-b-2 hover:border-green py-3
+}
+.tns-controls button:first-child{
+    @apply hidden md:block absolute top-[40%] z-10 left-[5%] bg-white  text-red-800 rounded-full  w-10 h-10
+}
+.tns-controls button:last-child{
+    @apply absolute md:block top-[40%] z-10 right-[5%] bg-white text-red-800 rounded-full w-10 h-10
+}
+.tns-outer button[data-action]{
+    @apply hidden
+}
+
